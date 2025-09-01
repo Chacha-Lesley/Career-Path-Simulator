@@ -14,6 +14,8 @@ An interactive web application that helps users explore how different educationa
 
 ## 🚀 Live Demo
 
+Test it here: https://chacha-lesley.github.io/Career-Path-Simulator/ 
+
 ## 🛠️ Technologies
 
 - **HTML5** - Structure and semantics
