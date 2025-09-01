@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Path Prediction Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🎯 Career Path Prediction Simulator</h1>
+            <p>Explore how different educational choices lead to career outcomes</p>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <div class="progress-steps">
+                <div class="progress-step">
+                    <div class="step-number active" id="step-1">1</div>
+                    <div class="step-info">
+                        <h3>Choose Education</h3>
+                        <p>Select your educational path</p>
+                    </div>
+                </div>
+                <div class="step-connector" id="connector-1"></div>
+                <div class="progress-step">
+                    <div class="step-number inactive" id="step-2">2</div>
+                    <div class="step-info">
+                        <h3>Select Field</h3>
+                        <p>Choose your career field</p>
+                    </div>
+                </div>
+                <div class="step-connector" id="connector-2"></div>
+                <div class="progress-step">
+                    <div class="step-number inactive" id="step-3">3</div>
+                    <div class="step-info">
+                        <h3>View Results</h3>
+                        <p>See your career prediction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Area -->
+        <div id="content-area">
+            <!-- Step 1: Education Selection -->
+            <div id="education-step" class="content-card animate-in">
+                <h2 class="content-title">
+                    <div class="icon">🎓</div>
+                    Choose Your Education Path
+                </h2>
+                <div class="options-grid" id="education-options">
+                    <!-- Education options will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Step 2: Field Selection -->
+            <div id="field-step" class="content-card hidden">
+                <h2 class="content-title">
+                    <div class="icon">💼</div>
+                    Select Your Field
+                </h2>
+                <div class="options-grid" id="field-options">
+                    <!-- Field options will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Step 3: Results -->
+            <div id="results-step" class="content-card hidden">
+                <div class="results-header">
+                    <h2 class="content-title">
+                        <div class="icon">🏆</div>
+                        Your Career Prediction
+                    </h2>
+                    <div class="buttons">
+                        <button class="btn btn-primary" onclick="savePath()">Save Path</button>
+                        <button class="btn btn-secondary" onclick="resetSimulator()">Start Over</button>
+                    </div>
+                </div>
+                
+                <div id="career-title" class="career-title-card">
+                    <h3 id="career-name">Software Engineer</h3>
+                    <p id="career-estimate"></p>
+                </div>
+
+                <div class="results-grid">
+                    <div class="result-card salary">
+                        <div class="result-value" id="salary-value">$95,000</div>
+                        <div class="result-label">Median Salary</div>
+                        <div class="result-subtitle" id="salary-range">Range: $70k - $130k</div>
+                    </div>
+                    <div class="result-card growth">
+                        <div class="result-value" id="growth-value">25%</div>
+                        <div class="result-label">Job Growth</div>
+                        <div class="result-subtitle">Next 10 years</div>
+                    </div>
+                    <div class="result-card satisfaction">
+                        <div class="result-value" id="satisfaction-value">85%</div>
+                        <div class="result-label">Job Satisfaction</div>
+                        <div class="result-subtitle">Industry average</div>
+                    </div>
+                    <div class="result-card time">
+                        <div class="result-value" id="time-value">0-6 months</div>
+                        <div class="result-label">Time to Career</div>
+                        <div class="result-subtitle">After graduation</div>
+                    </div>
+                </div>
+
+                <div class="investment-analysis">
+                    <div class="investment-card">
+                        <h4>Education Investment</h4>
+                        <div class="investment-details">
+                            <div class="detail-row">
+                                <span>Total Cost:</span>
+                                <span id="total-cost">$80,000</span>
+                            </div>
+                            <div class="detail-row">
+                                <span>Total Time:</span>
+                                <span id="total-time">4 years</span>
+                            </div>
+                            <div class="detail-row">
+                                <span>ROI Timeline:</span>
+                                <span id="roi-timeline">10 months</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="advancement-card">
+                        <h4>Career Advancement</h4>
+                        <p id="advancement-text">
+                            Excellent opportunities for growth into senior roles, management positions, and technical leadership.
+                        </p>
+                        <div class="skills-section">
+                            <div class="skills-title">Key Skills Developed:</div>
+                            <div id="skills-display" class="skills-display">
+                                <!-- Skills will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Saved Paths Comparison -->
+        <div id="comparison-section" class="comparison-section hidden">
+            <h3>Compare Your Saved Paths</h3>
+            <div id="saved-paths" class="comparison-grid">
+                <!-- Saved paths will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
