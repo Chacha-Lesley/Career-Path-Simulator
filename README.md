@@ -31,4 +31,4 @@ This project supports Sustainable Development Goal 4 by providing accessible car
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/career-path-simulator.git
+   git clone https://github.com/chacha-lesley/career-path-simulator.git
